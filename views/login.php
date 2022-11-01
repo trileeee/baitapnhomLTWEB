@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
         If(!empty($_POST))
         {   
             //echo "<pre>";
@@ -85,7 +85,7 @@
         <meta charset="UTF-8">
     <style> 
         body {
-            background: #FAD6A5;
+            background: #1690A7;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -104,8 +104,8 @@
             padding: 30px;
             background: #fff;
             border-radius: 15px;
+            text-align: center;
         }
-
 
         input {
             display: block;
@@ -115,7 +115,6 @@
             margin: 10px auto;
             border-radius: 5px;
         }
-
         button {
             float: right;
             background: #555;
@@ -125,6 +124,7 @@
             margin-right: 10px;
             border: none;
         }
+
         button:hover{
             opacity: .7;
         }
@@ -136,20 +136,13 @@
         border-radius: 5px;
         margin: 20px auto;
         }
-
-        h1 {
-            text-align: center;
-            color: #fff;
-        }
-
-33
         </style>
     </head>
 <body>
-    <section class="container fluid loginn">
+    
     <form name="form" method="post" action="login.php">
       
-            <legend>Đăng nhập</legend>
+            <legend>ĐĂNG NHẬP TÀI KHOẢN</legend>
            
             <p><input type="email" name="email" value="<?php echo $email ?>"
                      placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain"  required></p>
@@ -157,16 +150,17 @@
             <p><input type="password" name="pass" value="<?php echo $pass ?>"
               placeholder="Password"  required></p> 
             
-            Remember<input type="checkbox" name="Remember" value="1">
+            <label for= "remember"> Lưu thông tin đăng nhập </label>
+            <input type="checkbox" name="Remember" value="1">
             
             <p><input type="submit" name="login" value="LOGIN"></p>
            
-            <a href=Register.php> Sign Up </a>
+            <center><p>Đăng ký nếu bạn chưa có tài khoản! <a href=Register.php> Sign Up </a></p></center>
     </form>
    
    <?php } ?>
 
-   </section>
+    
     
 </body>
 </html>
