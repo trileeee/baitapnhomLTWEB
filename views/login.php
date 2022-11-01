@@ -1,4 +1,5 @@
 <?php
+    session_start();
         If(!empty($_POST))
         {   
             //echo "<pre>";
@@ -57,7 +58,7 @@
               if (mysqli_num_rows($result) >0){
                   $row =mysqli_fetch_assoc($result);
                   
-                  session_start();
+                  
                   $_SESSION["email"]=$row["Email"];
                   $_SESSION["pass"]=$row["Password"];
                   $_SESSION["User_name"]=$row["Username"];
@@ -68,11 +69,15 @@
           }
 
         }
+
+        //COOKIE
         $email="";
         $pass="";
+        $check = false;
         if(isset($_COOKIE["email"]) && isset($_COOKIE["password"])){
             $email = $_COOKIE["email"];
             $pass = $_COOKIE["password"];
+            $check = true;
         
     }
 
@@ -147,11 +152,11 @@
             <p><input type="email" name="email" value="<?php echo $email ?>"
                      placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain"  required></p>
            
-            <p><input type="password" name="pass" value="<?php echo $pass ?>"
+            <p><input  type="password" name="pass" value="<?php echo $pass ?>"
               placeholder="Password"  required></p> 
             
             <label for= "remember"> Lưu thông tin đăng nhập </label>
-            <input type="checkbox" name="Remember" value="1">
+            <input <?php echo ($check)?"checked":"" ?> type="checkbox" name="remember" value="1">
             
             <p><input type="submit" name="login" value="LOGIN"></p>
            
