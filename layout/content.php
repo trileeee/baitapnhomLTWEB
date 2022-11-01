@@ -5,9 +5,7 @@
         switch($_GET['request']){
             case 'home':
                 include "views/home.php";
-                break;
-          
-            
+                break;              
         }
     }?>
 

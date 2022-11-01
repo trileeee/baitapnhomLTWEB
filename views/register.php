@@ -18,7 +18,8 @@
              if (mysqli_num_rows($result) >0) 
                 {
                     $error=1;
-                    echo "<script> alert('Email này đã được đăng kí! Vui lòng nhập lại email khác')</script>";
+                    echo "<script> alert('Email này đã được đăng kí! Vui lòng nhập lại email khác');  </script>";
+                    
                 }
             
             If ($error==0) {    
@@ -30,7 +31,18 @@
                 if ($result>0)
                     {
                     
-                    echo "<script> alert ('Tạo Tài khoản thành công !') </script>";
+                    echo "<script> 
+                                  if(confirm('Tạo Tài khoản thành công') ==true)
+                                  {
+                                      
+                                      location.href='login.php';
+                                  }
+                                  else
+                                     text='You canceled'; 
+                       </script>";
+                              
+                                
+                  
                     }
                 else echo (mysqli_error($conn));
             } 

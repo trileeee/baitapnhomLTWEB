@@ -1,3 +1,12 @@
+<?php
+    if (isset($_GET["email"])) {
+        if ($_GET["email"] == "") {
+            echo "Vui lòng đăng nhập "."<a href='views/login.php'>tại đây</a>"." để xem chi tiết.";
+            return;
+        }
+    }
+?>
+
 <html>
     <head>
        <style>
@@ -30,12 +39,14 @@
     <body>
         <?php
         include 'config.php';
+        
         $id= $_GET["id"];
-        $sql="SELECT*FROM product WHERE id= $id";
+        $sql="SELECT*FROM product WHERE id= '$id'";
         $result = mysqli_query($conn,$sql);
-      //  if(msqli_num_rows($result)>0) {
-            $row=mysqli_fetch_row($result);
-                while ($row)   
+       
+        //  if (mysqli_num_rows($result) >0) { 
+            
+                while ($row=mysqli_fetch_assoc($result))   
                     {
                         ?>   <table>
                         <tr>
@@ -60,9 +71,9 @@
                                 </td>
                         </tr>
                <?php } 
-                    //} ?> 
+                    // } ?> 
         
-        
+                    
        
 
         </body>
