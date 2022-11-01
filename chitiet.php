@@ -26,14 +26,11 @@
                 background: black;
             }
             .product_price{
-                font-size: 24px;
-                text-align: right;
+                font-size: 30px;
+                text-align: middle;
                 width: 100%;
             }
-            .right td{
-                text-alignn: right;
-            }
-            
+           
        </style>  
     </head>
     <body>
@@ -57,19 +54,14 @@
                                 <td >
 
                                                <b class="product_details"> <?php echo $row['product_name']?></b> </br>
-                                               <p class ="product_details"><?php echo $row['uses']?></p></br>
-                                               <p class ="product_details"><?php echo $row['component']?></p></br>
-                                               <p class ="product_details"><?php echo $row['technology']?></p></br>
-                                               <p class ="product_details"><?php echo $row['origin']?></p></br>
+                                               <p class ="product_details"><?php echo "Công dụng: ".$row['uses']?></p></br>
+                                               <p class ="product_details"><?php echo "Thành phần: ".$row['component']?></p></br>
+                                               <p class ="product_details"><?php echo "Công nghệ: ".$row['technology']?></p></br>
+                                               <p class ="product_details"><?php echo "Nguồn gốc: ".$row['origin']?></p></br>
                                                 <div class="line_1"> </div> </br>                        
-                        
+                                                <b class ="product_price"> <?php echo "Giá: ".$row['price']?></b></br>
                                             </td>
-                        </tr>
-                        <tr class="right">
-                                <td> 
-                                        <b class ="product_details"> <?php echo $row['price']?></b></br>
-                                </td>
-                        </tr>
+                        
                <?php } 
                     // } ?> 
         
