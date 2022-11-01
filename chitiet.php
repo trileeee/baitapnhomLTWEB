@@ -34,7 +34,7 @@
         $sql="SELECT*FROM product WHERE id= $id";
         $result = mysqli_query($conn,$sql);
       //  if(msqli_num_rows($result)>0) {
-            $row=mysqli_fetch_assoc($result);
+            $row=mysqli_fetch_row($result);
                 while ($row)   
                     {
                         ?>   <table>

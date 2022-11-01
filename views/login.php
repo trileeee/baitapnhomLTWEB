@@ -15,7 +15,7 @@
                 setcookie("password",$pass);
             }
                  
-            require_once("config.php");
+            require_once("../config.php");
          
            // Thông báo lỗi sai tài khoản/ mật khẩu cho user
            function checkError ($conn,$email,$pass) // // 0: Đăng nhập thành công , 1: Sai email, 2:Sai mật khẩu
@@ -55,14 +55,15 @@
           $sql= "Select * From user where Email='$email' and Password='$pass'";
           $result = mysqli_query($conn, $sql);
               if (mysqli_num_rows($result) >0){
-                  $row =mysqli_fetch_row($result);
+                  $row =mysqli_fetch_assoc($result);
                   
+                  session_start();
                   $_SESSION["email"]=$row["Email"];
                   $_SESSION["pass"]=$row["Password"];
-                  //$_SESSION["User_name"]=$row["Username"];
+                  $_SESSION["User_name"]=$row["Username"];
 
                   mysqli_close($conn);
-                  header("location: index.php");
+                  header("location: ../index.php");
                   exit();
           }
 

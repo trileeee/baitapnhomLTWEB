@@ -1,8 +1,8 @@
 
 <?php
-session_start();
-include "config.php";
- 
+    session_start();
+    include "config.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +21,7 @@ include "config.php";
 
             main {
                 flex: 1;
+               
             }
 
             a {
@@ -39,7 +40,14 @@ include "config.php";
             <section class="container-fluid">
                 
                 <?php include "layout/menutop.php";?>
-                
+
+                <?php 
+                    if(isset($_SESSION["User_name"])){
+                    echo ("Xin chào ").$_SESSION["User_name"];
+                    }
+                 ?>
+
+                <?php include "views/product.php"; ?>
                 <section class="container-fluid">
                     
                     <?php include "layout/content.php";?>

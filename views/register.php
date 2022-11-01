@@ -8,7 +8,7 @@
             $phoneNumber=$_POST["phoneNumber"];
             $birthdate=$_POST["birthdate"];
             
-            require_once("config.php");
+            require_once("../config.php");
          
            // Kiểm tra các ràng buộc
             $error=0; // 1: Trùng Email 2
@@ -52,7 +52,7 @@
         }
           body{
             height:100vh;
-            background: linear-gradient(45deg,#8b51ff,#7a37ff);
+            background: #FAB6A5;
           }
           form{
             background-color: #ffffff;

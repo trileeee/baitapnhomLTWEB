@@ -7,9 +7,7 @@
                 include "views/home.php";
                 break;
           
-            case 'register':
-                include "views/register.php";
-                break;
+            
         }
     }?>
 
