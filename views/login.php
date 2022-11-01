@@ -1,5 +1,4 @@
 <?php
-    session_start();
         If(!empty($_POST))
         {   
             //echo "<pre>";
@@ -85,7 +84,7 @@
         <meta charset="UTF-8">
     <style> 
         body {
-            background: #1690A7;
+            background: #FAB6A5;
             display: flex;
             justify-content: center;
             align-items: center;

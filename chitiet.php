@@ -22,7 +22,7 @@
                 width: 100%;
             }
             .right td{
-                text-alignn: rightt;
+                text-alignn: right;
             }
             
        </style>  
@@ -60,9 +60,9 @@
                                 </td>
                         </tr>
                <?php } 
-                     ?> 
+                    //} ?> 
         
-      
+        
        
 
         </body>
