@@ -129,7 +129,7 @@
              value= <?php echo $birthdate ;} ?> required> <p>
            
              <input type="submit" value="Đăng kí">
-        
+             <p> <a href=../index.php> Trở về trang chủ </a> </p>
 
     </form>
    

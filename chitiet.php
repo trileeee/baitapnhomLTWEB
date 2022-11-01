@@ -1,7 +1,7 @@
 <?php
     if (isset($_GET["email"])) {
         if ($_GET["email"] == "") {
-            echo "Vui lòng đăng nhập "."<a href='views/login.php'>tại đây</a>"." để xem chi tiết.";
+            echo "Vui lòng đăng nhập "."<a href='views/login.php'>tại đây</a>"." để xem chi tiết sản phẩm.";
             return;
         }
     }
