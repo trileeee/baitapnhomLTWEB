@@ -160,7 +160,7 @@
             
             <p><input type="submit" name="login" value="LOGIN"></p>
            
-            <center><p>Đăng ký nếu bạn chưa có tài khoản! <a href=Register.php> Sign Up </a></p></center>
+            <center><p>Đăng ký nếu bạn chưa có tài khoản! <a href=register.php> Sign Up </a></p></center>
     </form>
    
    <?php } ?>

@@ -104,7 +104,7 @@
       </head>
 <body>
     
-    <form name="form" method="post" action="Register.php">
+    <form name="form" method="post" action="register.php">
        
             <legend><center>Đăng kí tài khoản</center></legend>
            <p> <input type="text" name="user_name" <?php 
