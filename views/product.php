@@ -2,7 +2,7 @@
     require_once "config.php";
     $sql="select*from product";
     $result=mysqli_query($conn,$sql);
-    
+    mysqli_close($conn); 
     if (isset($_SESSION["email"]))
         $email = $_SESSION["email"];
     else $email = "";
@@ -22,7 +22,7 @@
                 </section>  
             </a>                                
         </section>
-    <?php endforeach;?>
+    <?php   endforeach;?>
     
  </section>
 

@@ -62,7 +62,8 @@
                                                 <b class ="product_price"> <?php echo "Giá: ".$row['price']?></b></br>
                                             </td>
                         
-               <?php } 
+               <?php mysqli_close($conn);  
+               } 
                     // } ?> 
         
                     

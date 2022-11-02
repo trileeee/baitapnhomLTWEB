@@ -150,10 +150,10 @@
             <legend>ĐĂNG NHẬP TÀI KHOẢN</legend>
            
             <p><input type="email" name="email" value="<?php echo $email ?>"
-                     placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain"  required></p>
+            placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="characters@characters.domain"  required></p>
            
             <p><input  type="password" name="pass" value="<?php echo $pass ?>"
-              placeholder="Password"  required></p> 
+            placeholder="Password"  required></p> 
             
             <label for= "remember"> Lưu thông tin đăng nhập </label>
             <input <?php echo ($check)?"checked":"" ?> type="checkbox" name="remember" value="1">
